@@ -1,0 +1,45 @@
+FileAuditSystem software have been tested on Debian 9
+
+How to install FileAuditSystem?
+===============================
+
+1. install libaudit and libev:
+sudo apt-get update
+sudo apt-get install libaudit-dev
+sudo apt-get install libev-dev
+
+2. install CMake:
+sudo apt-get install cmake
+
+3. Unzip FileAuditSystem.zip
+
+4. cd FileAuditSystem/build
+
+5. cmake ..
+
+6. sudo make
+
+7. sudo make install
+
+
+How to use FileAuditSystem?
+===========================
+
+1. Configure the directory you want to monitor at:
+/etc/file_audit_system.conf
+add one directory per line
+
+2. To start running FileAuditSystem:
+sudo systemctl start file-audit-system
+
+3. To see the status of FileAuditSystem:
+sudo systemctl status file-audit-system
+
+4. To enable it during startup:
+sudo systemctl enable file-audit-system
+
+5. To stop FileAuditSystem:
+sudo systemctl stop file-audit-system
+
+6. The log of monitored directories will be available:
+/var/log/file_audit_system.log
